@@ -18,11 +18,13 @@
   <body id="<r:page:template:name />" class="page-<r:page:id />">
 
     <r:partial name="masthead" />
-    <r:partial name="header" />
 
     <div class="container">
+
+      <r:partial name="header" />
       <r:yield />
       <r:partial name="footer" />
+    
     </div> <!-- /.container -->
 
   </body>

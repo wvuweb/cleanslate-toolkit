@@ -1,1 +1,8 @@
-// Put your styles here!
+/* Put your styles here! */
+
+body { background-color: #fff; }
+
+.breadcrumbs { font-size: .7em; padding-left: 0; }
+.breadcrumbs li { display: inline; list-style-type: none; margin-left: 0; }
+.breadcrumbs li:before { content: "\00BB"; padding-right: 3px; }
+.breadcrumbs li:first-child:before { content: ""; padding-right: 0; }
