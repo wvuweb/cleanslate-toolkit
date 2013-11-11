@@ -15,7 +15,11 @@ Icon
 ## Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+*.swp
 
+# Ignore any everlasting SVN files
+*.svn-base
+.svn*
 
 # Windows 
 ## Image file caches
