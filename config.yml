@@ -6,13 +6,13 @@ description: This is the Theme Name theme built using the Radius template langua
 css: 
   
   # Turn CSS compression/minification on/off.
-  compress: false
+  compress: true
   
 # JavaScript options
 js:
   
   # Turn JavaScript compression/minification on/off
-  compress: false
+  compress: true
   
   # Turn JavaScript mangling on/off.
   mangle: true
