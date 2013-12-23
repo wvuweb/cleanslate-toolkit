@@ -18,13 +18,18 @@
   </head>
   <body class="<r:page:template:name /> page-<r:page:id />">
 
-    <r:partial name="masthead" />
+    <r:partial name="layouts/masthead--v1" theme="Code" />
 
     <div class="container">
 
       <r:partial name="header" />
       <r:yield />
-      <r:partial name="footer" />
+
+    <footer class="footer">
+      <r:partial name="layouts/footer__contact--v1" theme="Code" />
+      <r:partial name="layouts/footer__credits--v1" theme="Code" />
+      <r:partial name="layouts/footer__icons--v1" theme="Code" />
+    </footer>
     
     </div> <!-- /.container -->
 
