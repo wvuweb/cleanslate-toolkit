@@ -10,3 +10,5 @@ A boilerplate for creating themes in CleanSlate
 **Developers name(s):** May Day
 
 **Dependencies necessary to work with this theme:** N/A.
+
+**Other notes, comments, or reminders:**
