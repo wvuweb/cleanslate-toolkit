@@ -1,7 +1,7 @@
 cleanslate-toolkit
 ==================
 
-A boilerplate for creating themes in CleanSlate
+A boilerplate for creating themes in CleanSlate.
 
 **Theme Name:** My Spectacular Theme
 
@@ -12,3 +12,5 @@ A boilerplate for creating themes in CleanSlate
 **Dependencies necessary to work with this theme:** N/A.
 
 **Other notes, comments, or reminders:**
+
+Need some help? [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
