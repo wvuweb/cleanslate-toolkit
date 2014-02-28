@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<r:comment><!-- NOTE: Set how many blog posts you'd like to show per page. Eg: default="10" --></r:comment>
+<r:set_var name="limit" value="{$limit}" default="10"/>
+
+<main class="main ten columns" role="main">
+  <h2><r:page_name /></h2>
+
+  <r:blog:articles limit="{$limit}" page="{$page}" tags="{$tags}" tags_op="{$tags_op}" year="{$year}" month="{$month}" day="{$day}">
+    <r:set_var name="article_count" value="{count}" />
+    
+    <r:if_no_articles>
+      <p>No blog posts found. Try again later, perhaps?</p>
+    </r:if_no_articles>
+    
+    <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
+
+    <r:if_articles>
+      <div class="articles">
+        <r:each>
+          <article class="article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
+            <h3 itemprop="headline"><a href="<r:article:path />"><r:article:name /></a></h3>
+            <r:article:author_full_name /> |
+            <time class="article__date" itemprop="datePublished" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" /></time>
+            <div class="article__body" itemprop="articleBody">
+              <r:select_html css_selector="p" limit="2">
+                <r:article:content name="article-body" />
+              </r:select_html>
+            </div> <!-- /.article__body -->
+            <p><a href="<r:article:path />">Read Full Post</a></p>
+          </article> <!-- /.article -->
+        </r:each>
+      </div> <!-- /.articles -->
+
+    </r:if_articles>
+    
+    <r:pagination>
+      <ul class="pagination">
+        <li class="pagination__previous <r:if_first_page>pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">&larr; Newer Articles</a></li>
+        <li class="pagination__next <r:if_last_page>pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">Older Articles &rarr;</a></li>
+      </ul>
+    </r:pagination>
+  </r:blog:articles>
+</main> <!-- /.main -->
+
+<aside class="sidebar six columns">
+  <a href="<r:page:url format="rss" />">Articles RSS Feed</a>
+</aside>

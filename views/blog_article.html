@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
+
+<article class="article ten columns" role="article" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  <h2 itemprop="headline"><r:page_name /></h2>  
+  <p>
+    <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <span class="article__author" itemprop="name">
+        <r:article:author_full_name />
+      </span> <!-- /.article__author -->
+    </span> <!-- /itemprop="author" -->
+    | <time class="article__date" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" error_msg="Not Yet Published" /></time>
+  </p>
+  <div class="article__body" itemprop="articleBody">
+    <r:editable_region name="article-body" />
+  </div> <!-- /.article__body -->
+</article> <!-- /.article -->
+
+<aside class="sidebar six columns" role="complementary">
+  <h3>Related Articles</h3>
+  <r:blog:articles limit="5" tags="{article:tags}" exclude_ids="{article:id}">
+    <r:if_articles>
+      <ul>
+        <r:each>
+          <li><a href="<r:article:path />"><r:article:name /></a></li>
+        </r:each>
+      </ul>
+    </r:if_articles>
+  </r:blog:articles>
+</aside> <!-- /.sidebar -->
+
+<r:comment><!-- Need comments for Blog Articles? See http://disqus.com --></r:comment>

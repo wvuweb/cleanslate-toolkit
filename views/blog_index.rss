@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+   <channel>
+      <title><r:page_name /> | <r:site_name /> | West Virginia University</title>
+      <link></link>
+      <description>RSS feed for the <r:site_name /> blog.</description>
+      <language>en-us</language>
+      <pubDate><r:date_format format="httpdate" value="now" /></pubDate>
+      <lastBuildDate><r:date_format format="httpdate" value="now" /></lastBuildDate>
+      
+      <r:blog:articles:each limit="50" tags="{$tags}" year="{$year}" month="{$month}" day="{$day}">
+        <item>
+           <title><r:article:name /></title>
+           <link><r:article:path /></link>
+           <description>
+             <r:escape_xml>
+               <r:select_html css_selector="p" limit="2">
+                 <r:article:content name="article-body" />
+               </r:select_html>
+             </r:escape_xml>
+           </description>
+           <pubDate><r:date_format format="httpdate" value="{article:published_at}" /></pubDate>
+           <guid><r:article:path /></guid>
+        </item>
+      </r:blog:articles:each>
+   </channel>
+</rss>
