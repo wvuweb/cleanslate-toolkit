@@ -1,3 +1,59 @@
-/* Put your styles here! */
+/* WVU Color Palette - http://goo.gl/vaUPiR
+ ==================================================
+
+  PRIMARY
+    WVU Blue: #00447c
+    WVU Gold: #eeb111
+    Alternate Blue: #005daa
+
+  SECONDARY
+    Gold Secondary Light: #ffe894
+    Blue Secondary Light: #a0c4da
+    Blue Secondary Middle: #0079c1
+    Purple: #27318b
+    Dark Orange: #d9531e
+    Orange: #f47b20
+    Dark Grey: #455560
+    Middle Grey: #5c6f7c
+    Black: #000
+
+  TERTIARY
+    Red: #bb471a
+    Grey Blue: #abc
+    Grey Light: #e0e0e0
+    Blue Vibrant: #39f
+    Blue Grey: #369
+    Purple Bright: #60c
+
+*/                                                        
+
+/* Put your Mobile First styles here */
 
 body { background-color: #fff; }
+
+
+
+/* #Tablet
+================================================== */
+@media (min-width: 48em) {
+
+
+} /* Close Tablet media query */
+
+
+
+
+/* #Desktop
+================================================== */
+@media (min-width: 60em) {
+
+
+} /* Close Desktop media query */
+
+
+
+
+
+/* Styles for Internet Explorer
+================================================== */
+/* Eg: .ie8 .my-awesome-class {} . Learn more about this technique: http://goo.gl/cb6IMX */
