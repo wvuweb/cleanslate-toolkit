@@ -38,8 +38,8 @@ layout: default
     
     <r:pagination>
       <ul class="pagination">
-        <li class="pagination__previous <r:if_first_page>pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">&larr; Newer Articles</a></li>
-        <li class="pagination__next <r:if_last_page>pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">Older Articles &rarr;</a></li>
+        <li class="pagination__next <r:if_last_page>pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">&larr; Older Articles</a></li>
+        <li class="pagination__previous <r:if_first_page>pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">Newer Articles &rarr;</a></li>
       </ul>
     </r:pagination>
   </r:blog:articles>
