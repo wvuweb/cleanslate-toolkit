@@ -3,11 +3,13 @@ cleanslate-toolkit
 
 A boilerplate for creating themes in CleanSlate.
 
-**Theme Name:** My Spectacular Theme
+**Theme name:** My Spectacular Theme
 
-**Theme Description:** A spectacular description goes here.
+**Theme description:** A spectacular description goes here.
 
 **Developers name(s):** May Day
+
+**Stash repository URL:** [https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse](https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse)
 
 **Dependencies necessary to work with this theme:** N/A.
 
