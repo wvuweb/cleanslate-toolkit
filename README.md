@@ -11,6 +11,8 @@ A boilerplate for creating themes in CleanSlate.
 
 **Stash repository URL:** [https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse](https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse)
 
+**Site URL:** [http://example.wvu.edu](http://example.wvu.edu)
+
 **Dependencies necessary to work with this theme:** N/A.
 
 **Other notes, comments, or reminders:**
