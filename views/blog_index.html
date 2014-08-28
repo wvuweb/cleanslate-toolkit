@@ -6,7 +6,7 @@ layout: default
 
 <main class="main ten columns" role="main">
   <r:breadcrumbs ul_class="breadcrumbs" />
-  <h1><r:page_name /></h1>
+  <h1><r:page:name /></h1>
 
   <r:blog:articles limit="{$limit}" page="{$page}" tags="{$tags}" tags_op="{$tags_op}" year="{$year}" month="{$month}" day="{$day}">
     <r:set_var name="article_count" value="{count}" />
