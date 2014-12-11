@@ -1,0 +1,105 @@
+shared_themes:
+  layouts__masthead--v1: "code"
+  layouts__footer__contact--v1: "code"
+  layouts__footer__credits--v1: "code"
+  layouts__footer__icons--v1: "code"
+  layouts__browser-update-org--v1: "code"
+
+editable_region:
+  main: This is content for the main editable region. Change what it says in the mock_data.yml file.
+  sidebar: This is content for the sidebar. <%= Faker::Hacker.say_something_smart.capitalize %>
+  article-body: <%= Faker::Lorem.paragraph(10) %>
+  contact: |
+    <p><strong>Division of Virginia West Advancement</strong></p>
+    <p>1111 WVU Road Suite 250 | P.O. Box 6202 | Morgantown, WV 26506-6202</p>
+    <p><strong>Phone:</strong> 304.293.5600 | <strong>Fax:</strong> 304.293.8279 | <strong>Email:</strong> <a href="mailto:firstname.lastname@mail.wvu.edu">firstname.lastname@mail.wvu.edu</a></p>
+
+site:
+  id: 26
+  name: "This is my site name"
+  domain: "domain.wvu.edu"
+
+page:
+  id: 2
+  name: "Test Page 2"
+  slug: "test_page_2"
+  meta_description: "Hello World"
+  title: "This is the best Test page ever!"
+  alternate_name: "Some other name"
+  depth: 1
+  updated_at: today
+  created_at: two weeks ago
+  published_at: now
+  content:
+    shared_content: |
+      <p><%= Faker::Lorem.paragraph(2) %></p>
+      <p><%= Faker::Lorem.paragraph(2) %></p>
+    shared_content_2: |
+      <p><%= Faker::Lorem.paragraph(2) %></p>
+      <p><%= Faker::Lorem.paragraph(2) %></p>
+
+if_page_depth_eq: 1
+if_page_depth_gt: 1
+
+site_menu: |
+  <ul>
+    <li class="active"><a href="#">Hello</a></li>
+    <li><a href="#">World</a></li>
+    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+  </ul>
+
+sub_menu: |
+  <ul>
+    <li class="active"><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+  </ul>
+
+ancestor_menu: |
+  <% pages = %w(Page1 Page2 Page3 Page4 Page5) %>
+  <ul>
+    <% pages.each do |page| %>
+      <li><a href="#"><%= page %></a></li>
+    <% end %>
+  </ul>
+
+blog:
+  name: Blog Name
+  articles:
+    - article: 
+      name: <%= Faker::Hacker.say_something_smart.capitalize %>
+      title: <%= Faker::Lorem.sentence(1) %>
+      created_by: 
+        first_name: <%= Faker::Name.first_name %>
+        last_name: <%= Faker::Name.last_name %>
+      content: |
+        <p><%= Faker::Lorem.paragraph(2) %></p>
+        <p><%= Faker::Lorem.paragraph(5) %></p>
+        <p><%= Faker::Lorem.paragraph(3) %></p>
+      published_at: 2 days ago
+    - article:
+      name: <%= Faker::Hacker.say_something_smart.capitalize %>
+      title: <%= Faker::Lorem.sentence(1) %>
+      created_by: 
+        first_name: <%= Faker::Name.first_name %>
+        last_name: <%= Faker::Name.last_name %>
+      content: |
+        <p><%= Faker::Lorem.paragraph(2) %></p>
+        <p><%= Faker::Lorem.paragraph(5) %></p>
+        <p><%= Faker::Lorem.paragraph(3) %></p>
+      published_at: 4 days ago
+    - article:
+      name: <%= Faker::Hacker.say_something_smart.capitalize %>
+      title: <%= Faker::Lorem.sentence(1) %>
+      created_by: 
+        first_name: <%= Faker::Name.first_name %>
+        last_name: <%= Faker::Name.last_name %>
+      content: |
+        <p><%= Faker::Lorem.paragraph(2) %></p>
+        <p><%= Faker::Lorem.paragraph(5) %></p>
+        <p><%= Faker::Lorem.paragraph(3) %></p>
+      published_at: 5 days ago
