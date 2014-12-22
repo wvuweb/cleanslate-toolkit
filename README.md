@@ -17,4 +17,4 @@ A boilerplate for creating themes in CleanSlate.
 
 **Other notes, comments, or reminders:**
 
-Need some help? [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
+Need some help? [Read the CleanSlate documentation](//cleanslatecms.wvu.edu/how-to).
