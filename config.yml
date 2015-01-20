@@ -1,17 +1,23 @@
+# Basic theme information
 name: Theme Name
 description: This is the Theme Name theme built using the Radius template language for CleanSlate. Originally authored by May Day.
 
+# Default Templates
+# Specify which templates show up by default when creating a page
+default_templates:
+  content: backpage
+  blog: blog_index
+  article: blog_article
+  error: backpage
+
 # CSS
 css: 
-  
   # Turn CSS compression/minification on/off.
   compress: true
   
 # JavaScript options
 js:
-  
   # Turn JavaScript compression/minification on/off
   compress: true
-  
   # Turn JavaScript mangling on/off.
   mangle: true
