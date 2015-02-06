@@ -1,7 +1,7 @@
 shared_themes:
   layouts__masthead--v1: "code"
   layouts__footer__contact--v1: "code"
-  layouts__footer__credits--v1: "code"
+  layouts__footer__credits--v2: "code"
   layouts__footer__icons--v1: "code"
   layouts__browser-update-org--v2: "code"
 
@@ -28,6 +28,7 @@ page:
   alternate_name: "Some other name"
   depth: 1
   updated_at: today
+  edit_url: https://cleanslate.wvu.edu/login
   created_at: two weeks ago
   published_at: now
   content:
