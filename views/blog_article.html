@@ -4,23 +4,23 @@ layout: default
 
 <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
 
-<article class="article ten columns" role="article" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <r:breadcrumbs ul_class="breadcrumbs" />
-  <h1 itemprop="headline"><r:page:name /></h1>  
-  <p>
+<article class="wvu-article wvu-article--individual ten columns" role="article" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  <r:breadcrumbs ul_class="wvu-breadcrumbs" />
+  <h1 class="wvu-article__title" itemprop="headline"><r:page:name /></h1>  
+  <p class="wvu-article__meta">
     <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <span class="article__author" itemprop="name">
+      <span class="wvu-article__author" itemprop="name">
         <r:article:author_full_name />
-      </span> <!-- /.article__author -->
+      </span> <!-- /.wvu-article__author -->
     </span> <!-- /itemprop="author" -->
-    | <time class="article__date" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" error_msg="Not Yet Published" /></time>
-  </p>
-  <div class="article__body" itemprop="articleBody">
+    | <time class="wvu-article__date" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" error_msg="Not Yet Published" /></time>
+  </p> <!-- /.wvu-article__meta -->
+  <div class="wvu-article__body" itemprop="articleBody">
     <r:editable_region name="article-body" />
-  </div> <!-- /.article__body -->
-</article> <!-- /.article -->
+  </div> <!-- /.wvu-article__body -->
+</article> <!-- /.wvu-article -->
 
-<aside class="sidebar six columns" role="complementary">
+<aside class="wvu-sidebar six columns" role="complementary">
   <h3>Related Articles</h3>
   <r:blog:articles limit="5" tags="{article:tags}" exclude_ids="{article:id}">
     <r:if_articles>
@@ -31,6 +31,6 @@ layout: default
       </ul>
     </r:if_articles>
   </r:blog:articles>
-</aside> <!-- /.sidebar -->
+</aside> <!-- /.wvu-sidebar -->
 
 <r:comment><!-- Need comments for Blog Articles? See http://disqus.com --></r:comment>
