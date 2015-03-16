@@ -1,9 +1,10 @@
 shared_themes:
-  layouts__masthead--v1: "code"
-  layouts__footer__contact--v1: "code"
-  layouts__footer__credits--v2: "code"
-  layouts__footer__icons--v1: "code"
-  layouts__browser-update-org--v2: "code"
+  "Code":
+    "layouts/masthead--v1": "code"
+    "layouts/footer__contact--v1": "code"
+    "layouts/footer__credits--v2": "code"
+    "layouts/footer__icons--v1": "code"
+    "layouts/browser-update-org--v2": "code"
 
 editable_region:
   main: This is content for the main editable region. Change what it says in the mock_data.yml file.
