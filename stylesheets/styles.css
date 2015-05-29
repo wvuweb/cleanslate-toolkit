@@ -1,31 +1,33 @@
-/* WVU Color Palette - http://goo.gl/vaUPiR
+/* WVU Color Palette - http://goo.gl/qMJ2bx
  ==================================================
 
   PRIMARY
-    WVU Blue: #00447c
-    WVU Gold: #eeb111
-    Alternate Blue: #005daa
+    WVU Blue: #002855
+    WVU Gold: #eaaa00
 
-  SECONDARY
-    Gold Secondary Light: #ffe894
-    Blue Secondary Light: #a0c4da
-    Blue Secondary Middle: #0079c1
-    Purple: #27318b
-    Dark Orange: #d9531e
-    Orange: #f47b20
-    Dark Grey: #455560
-    Middle Grey: #5c6f7c
-    Black: #000
+  NEUTRAL
+    Black: #2c2a29
+    PMS 432 C: #333f48
+    PMS 429 C: #a2aaad
+    PMS Warm Gray 11: #6e6259
+    PMS Warm Gray 7: #968c83
+    PMS Warm Gray 3: #bfb8af
 
-  TERTIARY
-    Red: #bb471a
-    Grey Blue: #abc
-    Grey Light: #e0e0e0
-    Blue Vibrant: #39f
-    Blue Grey: #369
-    Purple Bright: #60c
+  ACCENT
+    PMS 286 C: #0033a0
+    PMS 300 C: #005eb8
+    PMS 629 C: #9bd3dd
+    PMS 7554 C: #4b3d2a
+    PMS 7557 C: #9f7d23
+    PMS 144 C: #ed8b00
+    PMS 7476 C: #0d5257
+    PMS 5625 C: #708573
+    PMS 558 C: #9abeaa
+    PMS 180 C: #be3a34
+    PMS 166 C: #e35205
+    PMS 115 C: #fdda24
 
-*/                                                        
+*/
 
 /* Put your Mobile First styles here */
 
