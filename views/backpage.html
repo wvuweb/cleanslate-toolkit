@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
- 
+
+<r:partial name="breadcrumbs" />
+
 <main class="main twelve columns" role="main">
-  <r:breadcrumbs ul_class="wvu-breadcrumbs" />
   <h1><r:page:name /></h1>
   <r:editable_region name="main" />
 </main><!-- /.main -->
- 
- <aside class="wvu-sidebar four columns" role="complementary">
+
+<aside class="wvu-sidebar four columns" role="complementary">
   <r:editable_region name="sidebar" />
- </aside> <!-- /.wvu-sidebar -->
+</aside> <!-- /.wvu-sidebar -->

@@ -7,7 +7,7 @@
     <meta name="description" content="<r:page:meta_description />" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <r:include_stylesheet name="global-v5, styles" />
+    <r:include_stylesheet name="global-v6, styles" />
 
     <r:comment><!-- HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed, inlined because: http://goo.gl/Qhqlkb --></r:comment>
     <!--[if lt IE 9]>
@@ -19,21 +19,21 @@
   </head>
   <body class="template-<r:page:template:name /> page-<r:page:id />">
 
-    <r:partial name="layouts/masthead--v1" theme="Code" />
+    <r:partial name="layouts/masthead--v2" theme="Code" />
+
+    <r:partial name="header" />
+
+    <r:partial name="navigation" />
 
     <div class="container">
-
-      <r:partial name="header" />
-
       <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/ieyaAJ --></r:comment>
       <r:yield />
 
       <footer class="wvu-footer">
         <r:partial name="layouts/footer__contact--v1" theme="Code" />
         <r:partial name="layouts/footer__credits--v2" theme="Code" />
-        <r:partial name="layouts/footer__icons--v1" theme="Code" />
+        <r:partial name="layouts/footer__icons--v2" theme="Code" />
       </footer> <!-- /.wvu-footer -->
-    
     </div> <!-- /.container -->
 
     <r:partial name="layouts/browser-update-org--v2" theme="Code" />

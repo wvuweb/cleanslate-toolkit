@@ -1,9 +1,9 @@
 shared_themes:
   "Code":
-    "layouts/masthead--v1": "code"
+    "layouts/masthead--v2": "code"
     "layouts/footer__contact--v1": "code"
     "layouts/footer__credits--v2": "code"
-    "layouts/footer__icons--v1": "code"
+    "layouts/footer__icons--v2": "code"
     "layouts/browser-update-org--v2": "code"
 
 editable_region:
