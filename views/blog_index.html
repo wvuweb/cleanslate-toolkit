@@ -40,7 +40,7 @@ layout: default
     
     <r:pagination>
       <ul class="wvu-pagination">
-        <li class="wvu-pagination__older <r:if_first_page>wvu-pagination__disabled</r:if_first_page>"><a href="<r:next_url />" rel="next">&larr; Older Articles</a></li>
+        <li class="wvu-pagination__older <r:if_last_page>wvu-pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">&larr; Older Articles</a></li>
         <li class="wvu-pagination__newer <r:if_first_page>wvu-pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">Newer Articles &rarr;</a></li>
       </ul>
     </r:pagination>
