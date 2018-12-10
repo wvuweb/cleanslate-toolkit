@@ -70,38 +70,111 @@ ancestor_menu: |
   </ul>
 
 blog:
-  name: Blog Name
-  articles:
-    - article: 
-      name: <%= Faker::Hacker.say_something_smart.capitalize %>
-      title: <%= Faker::Lorem.sentence(1) %>
-      created_by: 
-        first_name: <%= Faker::Name.first_name %>
-        last_name: <%= Faker::Name.last_name %>
-      content: |
-        <p><%= Faker::Lorem.paragraph(2) %></p>
-        <p><%= Faker::Lorem.paragraph(5) %></p>
-        <p><%= Faker::Lorem.paragraph(3) %></p>
-      published_at: 2 days ago
-    - article:
-      name: <%= Faker::Hacker.say_something_smart.capitalize %>
-      title: <%= Faker::Lorem.sentence(1) %>
-      created_by: 
-        first_name: <%= Faker::Name.first_name %>
-        last_name: <%= Faker::Name.last_name %>
-      content: |
-        <p><%= Faker::Lorem.paragraph(2) %></p>
-        <p><%= Faker::Lorem.paragraph(5) %></p>
-        <p><%= Faker::Lorem.paragraph(3) %></p>
-      published_at: 4 days ago
-    - article:
-      name: <%= Faker::Hacker.say_something_smart.capitalize %>
-      title: <%= Faker::Lorem.sentence(1) %>
-      created_by: 
-        first_name: <%= Faker::Name.first_name %>
-        last_name: <%= Faker::Name.last_name %>
-      content: |
-        <p><%= Faker::Lorem.paragraph(2) %></p>
-        <p><%= Faker::Lorem.paragraph(5) %></p>
-        <p><%= Faker::Lorem.paragraph(3) %></p>
-      published_at: 5 days ago
+  - id: 1
+    name: Blog Name
+    articles:
+      - article:
+        name: <%= Faker::Lorem.sentence(1) %>
+        title: <%= Faker::Lorem.sentence(1) %>
+        created_by:
+          first_name: <%= Faker::Name.first_name %>
+          last_name: <%= Faker::Name.last_name %>
+        content: |
+          <p><%= Faker::Lorem.paragraph(2) %></p>
+          <p><%= Faker::Lorem.paragraph(5) %></p>
+          <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: 2 days ago
+      - article:
+        name: <%= Faker::Lorem.sentence(1) %>
+        title: <%= Faker::Lorem.sentence(1) %>
+        created_by:
+          first_name: <%= Faker::Name.first_name %>
+          last_name: <%= Faker::Name.last_name %>
+        content: |
+          <p><%= Faker::Lorem.paragraph(2) %></p>
+          <p><%= Faker::Lorem.paragraph(5) %></p>
+          <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: 4 days ago
+      - article:
+        name: <%= Faker::Lorem.sentence(1) %>
+        title: <%= Faker::Lorem.sentence(1) %>
+        created_by:
+          first_name: <%= Faker::Name.first_name %>
+          last_name: <%= Faker::Name.last_name %>
+        content: |
+          <p><%= Faker::Lorem.paragraph(2) %></p>
+          <p><%= Faker::Lorem.paragraph(5) %></p>
+          <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: 5 days ago
+    archive:
+      monthly:
+        - item:
+            date: January 2016
+            count: 5
+            url: '#'
+        - item:
+            date: December 2015
+            count: 4
+            url: '#'
+        - item:
+            date: November 2015
+            count: 3
+            url: '#'
+        - item:
+            date: October 2015
+            count: 2
+            url: '#'
+  - id: 2
+    name: Blog Name 2
+    articles:
+      - article:
+        name: <%= Faker::Lorem.sentence(1) %>
+        title: <%= Faker::Lorem.sentence(1) %>
+        created_by:
+          first_name: <%= Faker::Name.first_name %>
+          last_name: <%= Faker::Name.last_name %>
+        content: |
+          <p><%= Faker::Lorem.paragraph(2) %></p>
+          <p><%= Faker::Lorem.paragraph(5) %></p>
+          <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: 2 days ago
+      - article:
+        name: <%= Faker::Lorem.sentence(1) %>
+        title: <%= Faker::Lorem.sentence(1) %>
+        created_by:
+          first_name: <%= Faker::Name.first_name %>
+          last_name: <%= Faker::Name.last_name %>
+        content: |
+          <p><%= Faker::Lorem.paragraph(2) %></p>
+          <p><%= Faker::Lorem.paragraph(5) %></p>
+          <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: 4 days ago
+      - article:
+        name: <%= Faker::Lorem.sentence(1) %>
+        title: <%= Faker::Lorem.sentence(1) %>
+        created_by:
+          first_name: <%= Faker::Name.first_name %>
+          last_name: <%= Faker::Name.last_name %>
+        content: |
+          <p><%= Faker::Lorem.paragraph(2) %></p>
+          <p><%= Faker::Lorem.paragraph(5) %></p>
+          <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: 5 days ago
+    archive:
+      monthly:
+        - item:
+            date: January 2016
+            count: 5
+            url: '#'
+        - item:
+            date: December 2015
+            count: 4
+            url: '#'
+        - item:
+            date: November 2015
+            count: 3
+            url: '#'
+        - item:
+            date: October 2015
+            count: 2
+            url: '#'
