@@ -6,8 +6,8 @@ layout: default
 
 <r:partial name="breadcrumbs" />
 
-<article class="wvu-article wvu-article--individual ten columns" role="article" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <h1 class="wvu-article__title" itemprop="headline"><r:page:name /></h1>  
+<article class="wvu-article wvu-article--individual ten columns" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  <h1 class="wvu-article__title" itemprop="headline"><r:page:name /></h1>
   <p class="wvu-article__meta">
     <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <span class="wvu-article__author" itemprop="name">
@@ -21,7 +21,7 @@ layout: default
   </div> <!-- /.wvu-article__body -->
 </article> <!-- /.wvu-article -->
 
-<aside class="wvu-sidebar six columns" role="complementary">
+<aside class="wvu-sidebar six columns">
   <h3>Related Articles</h3>
   <r:blog:articles limit="5" tags="{article:tags}" exclude_ids="{article:id}">
     <r:if_articles>
