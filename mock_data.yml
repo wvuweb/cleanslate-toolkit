@@ -1,15 +1,15 @@
+hammer_nav:
+  disabled: false
+
+edit_mode: true
+
 shared_themes:
-  "Code":
-    "layouts/masthead--v2": "code"
-    "layouts/footer__contact--v1": "code"
-    "layouts/footer__credits--v2": "code"
-    "layouts/footer__icons--v2": "code"
-    "layouts/browser-update-org--v2": "code"
+  "Code": "code"
 
 editable_region:
-  main: This is content for the main editable region. Change what it says in the mock_data.yml file.
-  sidebar: This is content for the sidebar. <%= Faker::Hacker.say_something_smart.capitalize %>
-  article-body: <%= Faker::Lorem.paragraph(10) %>
+  main: "This is content for the main editable region. Change what it says in the mock_data.yml file."
+  sidebar: "This is content for the sidebar. <%= Faker::Hacker.say_something_smart.capitalize %>"
+  article-body: "<%= Faker::Lorem.paragraph(10) %>"
   contact: |
     <p><strong>Division of Virginia West Advancement</strong></p>
     <p>1111 WVU Road Suite 250 | P.O. Box 6202 | Morgantown, WV 26506-6202</p>
@@ -21,17 +21,17 @@ site:
   domain: "domain.wvu.edu"
 
 page:
-  id: 2
+  id: 2 # This number must match the ID of the current blog you want to display
   name: "Test Page 2"
   slug: "test_page_2"
   meta_description: "Hello World"
   title: "This is the best Test page ever!"
   alternate_name: "Some other name"
   depth: 1
-  updated_at: today
-  edit_url: https://cleanslate.wvu.edu/login
-  created_at: two weeks ago
-  published_at: now
+  updated_at: "today"
+  edit_url: "https://cleanslate.wvu.edu/login"
+  created_at: "two weeks ago"
+  published_at: "now"
   content:
     shared_content: |
       <p><%= Faker::Lorem.paragraph(2) %></p>
@@ -42,6 +42,8 @@ page:
 
 if_page_depth_eq: 1
 if_page_depth_gt: 1
+
+root: true
 
 site_menu: |
   <ul>
@@ -70,111 +72,117 @@ ancestor_menu: |
   </ul>
 
 blog:
-  - id: 1
-    name: Blog Name
+  - id: 1 # This number must match the ID from the `page` key to display the content below.
+    name: "Blog Name"
     articles:
       - article:
-        name: <%= Faker::Lorem.sentence(1) %>
-        title: <%= Faker::Lorem.sentence(1) %>
+        name: "<%= Faker::Lorem.sentence(1) %>"
+        title: "<%= Faker::Lorem.sentence(1) %>"
         created_by:
-          first_name: <%= Faker::Name.first_name %>
-          last_name: <%= Faker::Name.last_name %>
-        content: |
-          <p><%= Faker::Lorem.paragraph(2) %></p>
-          <p><%= Faker::Lorem.paragraph(5) %></p>
-          <p><%= Faker::Lorem.paragraph(3) %></p>
-        published_at: 2 days ago
+          first_name: "Dr. <%= Faker::Name.first_name %>"
+          last_name: "<%= Faker::Name.last_name %>"
+        content:
+          article-body: |
+            <p><%= Faker::Lorem.paragraph(2) %></p>
+            <p><%= Faker::Lorem.paragraph(5) %></p>
+            <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: "2 days ago"
       - article:
-        name: <%= Faker::Lorem.sentence(1) %>
-        title: <%= Faker::Lorem.sentence(1) %>
+        name: "<%= Faker::Lorem.sentence(1) %>"
+        title: "<%= Faker::Lorem.sentence(1) %>"
         created_by:
-          first_name: <%= Faker::Name.first_name %>
-          last_name: <%= Faker::Name.last_name %>
-        content: |
-          <p><%= Faker::Lorem.paragraph(2) %></p>
-          <p><%= Faker::Lorem.paragraph(5) %></p>
-          <p><%= Faker::Lorem.paragraph(3) %></p>
-        published_at: 4 days ago
+          first_name: "<%= Faker::Name.first_name %>"
+          last_name: "<%= Faker::Name.last_name %>"
+        content:
+          article-body: |
+            <p><%= Faker::Lorem.paragraph(2) %></p>
+            <p><%= Faker::Lorem.paragraph(5) %></p>
+            <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: "4 days ago"
       - article:
-        name: <%= Faker::Lorem.sentence(1) %>
-        title: <%= Faker::Lorem.sentence(1) %>
+        name: "<%= Faker::Lorem.sentence(1) %>"
+        title: "<%= Faker::Lorem.sentence(1) %>"
         created_by:
-          first_name: <%= Faker::Name.first_name %>
-          last_name: <%= Faker::Name.last_name %>
-        content: |
-          <p><%= Faker::Lorem.paragraph(2) %></p>
-          <p><%= Faker::Lorem.paragraph(5) %></p>
-          <p><%= Faker::Lorem.paragraph(3) %></p>
-        published_at: 5 days ago
+          first_name: "<%= Faker::Name.first_name %>"
+          last_name: "<%= Faker::Name.last_name %>"
+        content:
+          article-body: |
+            <p><%= Faker::Lorem.paragraph(2) %></p>
+            <p><%= Faker::Lorem.paragraph(5) %></p>
+            <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: "5 days ago"
     archive:
       monthly:
         - item:
-            date: January 2016
+            date: "January 2016"
             count: 5
-            url: '#'
+            url: "#"
         - item:
-            date: December 2015
+            date: "December 2015"
             count: 4
-            url: '#'
+            url: "#"
         - item:
-            date: November 2015
+            date: "November 2015"
             count: 3
-            url: '#'
+            url: "#"
         - item:
-            date: October 2015
+            date: "October 2015"
             count: 2
-            url: '#'
-  - id: 2
-    name: Blog Name 2
+            url: "#"
+  - id: 2 # This number must match the ID from the `page` key to display the content below.
+    name: "Blog Name 2"
     articles:
       - article:
-        name: <%= Faker::Lorem.sentence(1) %>
-        title: <%= Faker::Lorem.sentence(1) %>
+        name: "<%= Faker::Lorem.sentence(1) %>"
+        title: "<%= Faker::Lorem.sentence(1) %>"
         created_by:
-          first_name: <%= Faker::Name.first_name %>
-          last_name: <%= Faker::Name.last_name %>
-        content: |
-          <p><%= Faker::Lorem.paragraph(2) %></p>
-          <p><%= Faker::Lorem.paragraph(5) %></p>
-          <p><%= Faker::Lorem.paragraph(3) %></p>
-        published_at: 2 days ago
+          first_name: "Dr. <%= Faker::Name.first_name %>"
+          last_name: "<%= Faker::Name.last_name %>"
+        content:
+          article-body: |
+            <p><%= Faker::Lorem.paragraph(2) %></p>
+            <p><%= Faker::Lorem.paragraph(5) %></p>
+            <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: "2 days ago"
       - article:
-        name: <%= Faker::Lorem.sentence(1) %>
-        title: <%= Faker::Lorem.sentence(1) %>
+        name: "<%= Faker::Lorem.sentence(1) %>"
+        title: "<%= Faker::Lorem.sentence(1) %>"
         created_by:
-          first_name: <%= Faker::Name.first_name %>
-          last_name: <%= Faker::Name.last_name %>
-        content: |
-          <p><%= Faker::Lorem.paragraph(2) %></p>
-          <p><%= Faker::Lorem.paragraph(5) %></p>
-          <p><%= Faker::Lorem.paragraph(3) %></p>
-        published_at: 4 days ago
+          first_name: "<%= Faker::Name.first_name %>"
+          last_name: "<%= Faker::Name.last_name %>"
+        content:
+          article-body: |
+            <p><%= Faker::Lorem.paragraph(2) %></p>
+            <p><%= Faker::Lorem.paragraph(5) %></p>
+            <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: "4 days ago"
       - article:
-        name: <%= Faker::Lorem.sentence(1) %>
-        title: <%= Faker::Lorem.sentence(1) %>
+        name: "<%= Faker::Lorem.sentence(1) %>"
+        title: "<%= Faker::Lorem.sentence(1) %>"
         created_by:
-          first_name: <%= Faker::Name.first_name %>
-          last_name: <%= Faker::Name.last_name %>
-        content: |
-          <p><%= Faker::Lorem.paragraph(2) %></p>
-          <p><%= Faker::Lorem.paragraph(5) %></p>
-          <p><%= Faker::Lorem.paragraph(3) %></p>
-        published_at: 5 days ago
+          first_name: "<%= Faker::Name.first_name %>"
+          last_name: "<%= Faker::Name.last_name %>"
+        content:
+          article-body: |
+            <p><%= Faker::Lorem.paragraph(2) %></p>
+            <p><%= Faker::Lorem.paragraph(5) %></p>
+            <p><%= Faker::Lorem.paragraph(3) %></p>
+        published_at: "5 days ago"
     archive:
       monthly:
         - item:
-            date: January 2016
+            date: "January 2016"
             count: 5
-            url: '#'
+            url: "#"
         - item:
-            date: December 2015
+            date: "December 2015"
             count: 4
-            url: '#'
+            url: "#"
         - item:
-            date: November 2015
+            date: "November 2015"
             count: 3
-            url: '#'
+            url: "#"
         - item:
-            date: October 2015
+            date: "October 2015"
             count: 2
-            url: '#'
+            url: "#"
