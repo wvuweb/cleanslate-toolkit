@@ -9,7 +9,7 @@ layout: default
 <main class="main ten columns">
   <h1>{{ page.name }}</h1>
 
-  {% assign articles = blog | filter_articles: limit: limit, page: params.page, tags: params.tags, tags_op: params.tags_op, year: params.year, month: params.month, day: params.day %}
+  {% assign articles = blog.articles | filter_articles: limit: limit, page: params.page, tags: params.tags, tags_op: params.tags_op, year: params.year, month: params.month, day: params.day %}
 
   {% if articles.length > 0 %}
     {% comment %}<!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb -->{% endcomment %}

@@ -21,7 +21,7 @@ layout: default
   </div> <!-- /.wvu-article__body -->
 </article> <!-- /.wvu-article -->
 
-{% assign articles = blog | filter_articles: limit: 5, tags: article.tags, exclude_ids: article.id %}
+{% assign articles = article.blog.articles | filter_articles: limit: 5, tags: article.tags, exclude_ids: article.id %}
 {% if articles.length > 0 %}
   <aside class="wvu-sidebar six columns">
     <h3>Related Articles</h3>
