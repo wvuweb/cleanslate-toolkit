@@ -2,36 +2,35 @@
 layout: default
 ---
 
-<r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
+{% comment %}<!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb -->{% endcomment %}
 
-<r:partial name="breadcrumbs" />
+{% render "breadcrumbs" %}
 
 <article class="wvu-article wvu-article--individual ten columns" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <h1 class="wvu-article__title" itemprop="headline"><r:page:name /></h1>
+  <h1 class="wvu-article__title" itemprop="headline">{{ page.name }}</h1>
   <p class="wvu-article__meta">
     <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <span class="wvu-article__author" itemprop="name">
-        <r:article:author_full_name />
+        {{ article.author.full_name }}
       </span> <!-- /.wvu-article__author -->
     </span> <!-- /itemprop="author" -->
-    | <time class="wvu-article__date" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" error_msg="Not Yet Published" /></time>
+    | <time class="wvu-article__date" datetime="{{ article.published_at | date_iso8601 }}">{{ article.published_at | date: '%A, %B %d, %Y' | default: "Not Yet Published" }}</time>
   </p> <!-- /.wvu-article__meta -->
   <div class="wvu-article__body" itemprop="articleBody">
-    <r:editable_region name="article-body" />
+    {% editable_region name: "article-body" %}
   </div> <!-- /.wvu-article__body -->
 </article> <!-- /.wvu-article -->
 
-<aside class="wvu-sidebar six columns">
-  <h3>Related Articles</h3>
-  <r:blog:articles limit="5" tags="{article:tags}" exclude_ids="{article:id}">
-    <r:if_articles>
-      <ul>
-        <r:each>
-          <li><a href="<r:article:path />"><r:article:name /></a></li>
-        </r:each>
-      </ul>
-    </r:if_articles>
-  </r:blog:articles>
-</aside> <!-- /.wvu-sidebar -->
+{% assign articles = blog | filter_articles: limit: 5, tags: article.tags, exclude_ids: article.id %}
+{% if articles.length > 0 %}
+  <aside class="wvu-sidebar six columns">
+    <h3>Related Articles</h3>
+    <ul>
+      {% for article in articles.all %}
+        <li><a href="{{ article.url }}">{{ article.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside> <!-- /.wvu-sidebar -->
+{% endif %}
 
-<r:comment><!-- Need comments for Blog Articles? See http://disqus.com --></r:comment>
+{% comment %}<!-- Need comments for Blog Articles? See http://disqus.com -->{% endcomment %}

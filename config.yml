@@ -2,6 +2,11 @@
 name: Theme Name
 description: This is the Theme Name theme built using the Radius template language for CleanSlate. Originally authored by May Day.
 
+engine: liquid
+
+import_themes:
+  - git@bitbucket.org:wvudigital/code-liquid.git
+
 # Default Templates
 # Specify which templates show up by default when creating a page
 default_templates:
@@ -11,10 +16,10 @@ default_templates:
   error: backpage
 
 # CSS
-css: 
+css:
   # Turn CSS compression/minification on/off.
   compress: true
-  
+
 # JavaScript options
 js:
   # Turn JavaScript compression/minification on/off

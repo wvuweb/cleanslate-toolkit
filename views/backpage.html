@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<r:partial name="breadcrumbs" />
+{% render "breadcrumbs" %}
 
 <main class="main twelve columns">
-  <h1><r:page:name /></h1>
-  <r:editable_region name="main" />
+  <h1>{{ page.name }}</h1>
+  {% editable_region name: "main" %}
 </main><!-- /.main -->
 
 <aside class="wvu-sidebar four columns">
-  <r:editable_region name="sidebar" />
+  {% editable_region name: "sidebar" %}
 </aside> <!-- /.wvu-sidebar -->

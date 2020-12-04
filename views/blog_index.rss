@@ -1,6 +1,6 @@
-<r:partial name="blog_index--v1" theme="Code" />
+{% render "blog_index--v1" %}
 
-<r:comment>
+{% comment %}
   <!-- Looking to customize this RSS file? -->
   <!-- Grab the contents from the code repo in Stash, paste that here & customize away! -->
-</r:comment>
+{% endcomment %}

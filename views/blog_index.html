@@ -1,52 +1,46 @@
 ---
 layout: default
 ---
-<r:comment><!-- NOTE: Set how many blog posts you'd like to show per page. Eg: default="10" --></r:comment>
-<r:set_var name="limit" value="{$limit}" default="10"/>
+{% comment %}<!-- NOTE: Set how many blog posts you'd like to show per page. Eg: default: 10 -->{% endcomment %}
+{% assign limit = params.limit | default: 10 %}
 
-<r:partial name="breadcrumbs" />
+{% render "breadcrumbs" %}
 
 <main class="main ten columns">
-  <h1><r:page:name /></h1>
+  <h1>{{ page.name }}</h1>
 
-  <r:blog:articles limit="{$limit}" page="{$page}" tags="{$tags}" tags_op="{$tags_op}" year="{$year}" month="{$month}" day="{$day}">
-    <r:set_var name="article_count" value="{count}" />
+  {% assign articles = blog | filter_articles: limit: limit, page: params.page, tags: params.tags, tags_op: params.tags_op, year: params.year, month: params.month, day: params.day %}
 
-    <r:if_no_articles>
-      <p>No blog posts found. Try again later, perhaps?</p>
-    </r:if_no_articles>
-
-    <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
-
-    <r:if_articles>
+  {% if articles.length > 0 %}
+    {% comment %}<!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb -->{% endcomment %}
       <div class="wvu-articles">
-        <r:each>
+        {% for article in articles.all %}
           <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting">
-            <h2 class="wvu-article__title" itemprop="headline"><a href="<r:article:path />"><r:article:name /></a></h2>
+            <h2 class="wvu-article__title" itemprop="headline"><a href="{{ article.url }}">{{ article.name }}</a></h2>
             <p class="wvu-article__meta">
-              <r:article:author_full_name /> |
-              <time class="wvu-article__date" itemprop="datePublished" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" /></time>
+              {{ article.author.full_name }} |
+              <time class="wvu-article__date" itemprop="datePublished" datetime="{{ article.published_at | date_iso8601 }}">{{ article.published_at | date: '%A, %B %d, %Y' }}</time>
             </p> <!-- /.wvu-article__meta -->
             <div class="wvu-article__body" itemprop="articleBody">
-              <r:select_html css_selector="p" limit="2">
-                <r:article:content name="article-body" />
-              </r:select_html>
+              {{ article.content['article-body'] | select_html: css_selector: 'p', limit: 2 }}
             </div> <!-- /.wvu-article__body -->
-            <p><a href="<r:article:path />">Read Full Article</a></p>
+            <p><a href="{{ article.url }}">Read Full Article</a></p>
           </article> <!-- /.wvu-article -->
-        </r:each>
+        {% endfor %}
       </div> <!-- /.wvu-articles -->
-    </r:if_articles>
 
-    <r:pagination>
+    {% assign pagination = articles | blog_pagination %}
+    {% if pagination.total_pages > 1 %}
       <ul class="wvu-pagination">
-        <li class="wvu-pagination__older <r:if_last_page>wvu-pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">&larr; Older Articles</a></li>
-        <li class="wvu-pagination__newer <r:if_first_page>wvu-pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">Newer Articles &rarr;</a></li>
+        <li class="wvu-pagination__older {% if pagination.is_last_page %}wvu-pagination__disabled{% endif %}"><a href="{{ pagination.next_page_url }}" rel="next">&larr; Older Articles</a></li>
+        <li class="wvu-pagination__newer {% if pagination.is_first_page %}wvu-pagination__disabled{% endif %}"><a href="{{ pagination.prev_page_url }}" rel="prev">Newer Articles &rarr;</a></li>
       </ul>
-    </r:pagination>
-  </r:blog:articles>
+    {% endif %}
+  {% else %}
+    <p>No blog posts found. Try again later, perhaps?</p>
+  {% endif %}
 </main> <!-- /.main -->
 
 <aside class="wvu-sidebar six columns">
-  <a href="<r:page:url format="rss" />">Articles RSS Feed</a>
+  <a href="{{ page.url | append: '.rss' }}">Articles RSS Feed</a>
 </aside> <!-- /.wvu-sidebar -->

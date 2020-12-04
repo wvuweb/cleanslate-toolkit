@@ -19,6 +19,10 @@ site:
   id: 26
   name: "This is my site name"
   domain: "domain.wvu.edu"
+  data:
+    content_exists: "Site Data exists for `content_exists`!"
+    blank_state: null
+    my_site_data_name: null
 
 page:
   id: 2 # This number must match the ID of the current blog you want to display
@@ -39,6 +43,9 @@ page:
     shared_content_2: |
       <p><%= Faker::Lorem.paragraph(2) %></p>
       <p><%= Faker::Lorem.paragraph(2) %></p>
+  data:
+    showPartial: false
+    hidePartial: false
 
 if_page_depth_eq: 1
 if_page_depth_gt: 1
